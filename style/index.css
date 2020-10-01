@@ -106,13 +106,13 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: blue solid 1px;
         height: 50%;
         width: 50%;
     }
         .profilePic {
-        object-fit: ;
-
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
     }
     .topRightDiv {
         display: flex;
@@ -123,11 +123,23 @@ header {
         height: 50%;
         width: 50%;
     }
-    .myName{
+    h2{
         font-size: 45px;
         font-family: 'Peddana', serif;
+        color: blue;
     }
     .intro{
-
+        font-size: 24px;
+        font-family: 'Peddana', serif;
     }
 
+/* Style the gallery section */
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background: whitesmoke;
+}
+    .projectImages{
+
+    }
