@@ -98,6 +98,7 @@ header {
     height: 500px;
     width: 100%;
     display: flex;
+    /* flex-flow: wrap; */
     justify-content: space-evenly;
     align-items: center;
     background-color: orange;
@@ -135,11 +136,38 @@ header {
 
 /* Style the gallery section */
 .gallery{
+    padding-top: 20px;
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    background: whitesmoke;
+}
+    .row1, .row2{
+    padding-top: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background: whitesmoke;
-}
-    .projectImages{
-
     }
+
+/* Style the footer */
+footer{
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Style all buttons */
+button{
+    display:flex;
+    flex-flow: wrap;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80px;
+    border: transparent;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
