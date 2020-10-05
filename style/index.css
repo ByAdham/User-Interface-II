@@ -1,1 +1,287 @@
 /* Add CSS styling here */
+/* Implementing CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Give borders --> REMOVE LATER */
+/* * {
+    border: 3px solid black;
+    
+} */
+
+
+/* General stying */
+a {
+    text-decoration: none;
+}
+/* Style the header section*/
+    /* Style the header's div */
+    .headerDiv {
+    display: flex;
+    background-color: aqua;
+    width=100%;
+    height: 200px;
+    flex-direction: column;
+    padding-left: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    }
+
+        /* Style the name (h1) within the headerdiv inside header */
+        h1 {
+        font-family: 'Peddana', serif;
+        font-size: 60px;
+        }
+
+        /* Style the nav itself & flexbox its elements */
+        nav {
+        font-family: 'Peddana', serif;
+        width: 100%;
+        font-size: 24px;
+        display: flex;
+        justify-content: flex-end;
+        }
+
+            /* Style the navigation links */
+            .navigationLinks {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 2px white;
+            background-color: orange;
+            margin-right: 3%;
+            width: 10%;
+            }
+            .navigationLinks:hover{
+            background-color: orangered;
+            color: white;
+            }
+
+/* Style the  top section*/
+
+.topSectionDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: orange;
+}
+    .profilePicDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+        .profilePic {
+        width: 50%;
+        border-radius: 50%;
+        margin: 10px;
+    }
+    .topRightDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        width: 50%;
+    }
+    h2{
+        font-size: 45px;
+        font-family: 'Peddana', serif;
+        color: blue;
+    }
+    .intro{
+        font-size: 24px;
+        font-family: 'Peddana', serif;
+    }
+
+/* Style the gallery section */
+.gallery{
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column;
+    background: whitesmoke;
+}
+    .row1, .row2{
+    padding-top: 10px;
+    display: flex;
+    /* flex-flow: row wrap; */
+    justify-content: space-evenly;
+    }
+
+/* Style the footer */
+footer{
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Style all buttons */
+button{
+    display:flex;
+    flex-flow: wrap;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80px;
+    border: transparent;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+/* Introduce media queries */
+
+    /* Style at 800px */
+    @media(max-width: 800px){
+        /* Header*/
+        nav{
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            
+        
+        }
+        .navigationLinks{
+            width: 20%;
+            height: 100%;
+            padding: 0;
+        }
+        /* top section */
+        .profilePicDiv{
+            width=25%;
+        }
+        .topSectionDiv{
+            width=100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .topRightDiv{
+            border: blue solid 1px;
+            text-align: center;
+            flex-flow: column wrap;
+        }
+        h2{
+            font-size: 45px;
+            margin: 5px;
+        }
+        button{
+            height: 30px;
+            width: 50px;
+            font-size: 0.75em;
+            margin: 5px;
+        }
+        .intro{
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+        .gallery{
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        border: red dashed 2px;
+        }
+        .row1, .row2 {
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: stretch;
+            border: solid 5px blue;
+            }
+        .container{
+            margin: 5px;
+            width: 300px;
+        }
+        .projectImage{
+            width: 100%;
+        }
+    }
+        
+    /* Style at 500px */
+    
+@media(max-width: 500px){
+    /* Header*/
+    nav{
+        width: 100%;
+    }
+    .navigationLinks{
+        width: 20%;
+    }
+    /* top section */
+    .profilePicDiv{
+        width=25%;
+    }
+    .topSectionDiv{
+        width=100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .topRightDiv{
+        border: blue solid 1px;
+        text-align: center;
+    }
+    h2{
+        font-size: 36px;
+    }
+    button{
+        height: 30px;
+        width: 50px;
+        font-size: 10px;
+    }
+    .intro{
+        font-size: 18px;
+    }
+    .gallery{
+    flex-flow: column;
+    }
+    .container{
+        margin: 5px;
+        width: 200px;
+    }
+
+}
+
